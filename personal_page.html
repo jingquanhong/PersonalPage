@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洪竞权 - 个人主页</title>
+    <style>
+        :root {
+            --primary-color: #4B0082;
+            --text-color: #333;
+            --bg-color: #f4f4f9;
+            --card-bg: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffffff; /* 背景改为白色 */
+            color: var(--text-color); /* 文字改为深色 */
+            padding: 50px 0;
+            border-bottom: 1px solid #e9ecef; /* 添加一条浅色底边，增加层次感 */
+        }
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+        }
+        .contact-info a {
+            color: var(--primary-color); /* 链接使用学术紫 */
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 0.95em;
+        }
+        .contact-info a:hover {
+            color: #6A5ACD; /* 悬停时稍微变浅 */
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .item-subtitle {
+            color: #555;
+            font-size: 0.95em;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        .tag {
+            display: inline-block;
+            background: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            margin: 3px 3px 3px 0;
+        }
+        ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 30px; padding: 0 20px;">
+        <!-- 1. 左侧照片 (方框，加深紫色细边框) -->
+        <img src="photo.jpg" alt="洪竞权" style="width: 140px; height: 170px; border-radius: 0; border: 1px solid var(--primary-color); object-fit: cover;">
+        
+        <!-- 2. 右侧信息容器 (增加左外边距，使内容往中间移) -->
+        <div style="flex: 1; text-align: left; margin-left: 20px;">
+            <!-- 姓名与 Logo 这一行 -->
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <h1 style="margin: 0; color: var(--primary-color); font-size: 2.2em;">洪竞权</h1>
+                    <!-- 新增籍贯信息 -->
+                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">籍贯：湖南省长沙市</div>
+                </div>
+                <!-- 卓越工程师学院 Logo (调整间距) -->
+                <img src="cqu_logo.png" alt="重庆大学卓越工程师学院" style="height: 55px; object-fit: contain;">
+            </div>
+
+            <!-- 联系方式 -->
+            <div class="contact-info" style="margin-top: 15px; border-top: 1px inset #eee; padding-top: 10px;">
+                <span>📞 13874819528</span> |
+                <span>📧 <a href="mailto:20234262@stu.cqu.edu.cn">20234262@stu.cqu.edu.cn</a></span>
+                <br>
+                <span>🔗 <a href="https://github.com/jingquanhong" target="_blank">GitHub</a></span> |
+                <span>🔗 <a href="https://gitee.com/hongjingquan" target="_blank">Gitee</a></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+    <div class="container">
+        
+        <section>
+            <h2>🧠 研究方向</h2>
+            <p><strong>嵌入式系统</strong>、<strong>Linux开发</strong>（机器人系统, 强化学习, ROS工控系统）、<strong>智能硬件控制</strong></p>
+        </section>
+
+        <section>
+            <h2>🎓 教育背景</h2>
+            <div class="item-title">
+                <span>重庆大学 | 国家卓越工程师学院</span>
+                <span>2023.09 - 至今</span>
+            </div>
+            <div class="item-subtitle">机器人工程专业 (明月科创实验班, 校企联合培养、基地班)</div>
+            <ul>
+                <li><strong>学业成绩：</strong> GPA: 3.68/4 | 专业排名: 8/58 | 均分: 88.20</li>
+                <li><strong>英语水平：</strong> CET6: 498 | CET4: 509</li>
+                <li><strong>科研导向：</strong> 导师：张雷（副教授）| 实验室：机器人应用创新实验室 | 项目：水射流叶片切割机器人/光伏清洁机器人</li>
+                <li><strong>荣誉奖项：</strong> 23-25学年重庆大学综合奖学金, 25学年来福社会奖学金, 24学年优秀学生, 明月科创班学习委员</li>
+                <li><strong>核心课程：</strong> 自动控制原理(96), 微电路设计(98), 软件设计(90), 工程原理(92), 线性代数(94), 数学物理方法(94), 信号与信息系统(92) 等。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📄 论文与专利成果</h2>
+            
+            <div class="item-title">学术论文</div>
+            <ul>
+                <li>
+                    <strong>金翠红, 洪竞权, 孙鹤梅, 等.</strong> "一种基于从动正交全向轮定位系统的设计与开发", <i>信息技术</i>, 2028. (<span class="highlight">科技核心, 学生一作, 录用</span>)<br>
+                    <span style="font-size: 0.9em; color: #555;">内容：本文基于激光雷达SLAM建图时里程计精准度的缺失，设计了一种环境适应能力以及精准度较为出色的轮式里程计装置及其算法。算法中通过利用高精度编码器，配合自适应地形结构以及统合IMU状态卡尔曼滤波算法，完成对灵敏移动装置在不同地形区域的精准定位，为SLAM建图以及结合深度相机的三维建图提供了可靠的里程计参考。</span>
+                </li>
+                <li style="margin-top: 10px;">
+    <strong>J. Hong, B. Hao, H. He and C. Tang.</strong> "Heart Rate Detection System Based on ADS1292 Module," <i>2025 6th International Conference on Computer Engineering and Intelligent Control (ICCEIC)</i>, 2025. (
+    <a href="https://ieeexplore.ieee.org/document/11309043" target="_blank" style="color: var(--primary-color); text-decoration: underline;">IEEE Xplore</a>, 
+    <a href="https://www.engineeringvillage.com/app/doc/?docid=cpx_M405e63b819cf60bd6c7M7e8d1017816518&pageSize=25&index=1&searchId=5a53ff7d31064574911a5c318e90b255&resultsCount=1&usageZone=resultslist&usageOrigin=searchresults&searchType=Quick" target="_blank" style="color: var(--primary-color); text-decoration: underline;">EI Compendex</a>, 
+    一作, 见刊)<br>
+    <span style="font-size: 0.9em; color: #555;">内容：本文通过心电信号提取设备硬件ADS1292通过提取模拟心电信号和真实心电信号，传输到嵌入式设备，对信号完成滤波操作后再对信号做频域分析，从而得到测试者心电信号的关键参数如心率指数，RR间期以及心跳周期。</span>
+</li>
+            </ul>
+
+            <div class="item-title">发明专利</div>
+            <ul>
+                <li>
+                    <strong>"一种驱动舵轮"</strong> (实用新型专利，<span class="highlight">第一作者授权，已受理</span>)<br>
+                    <span style="font-size: 0.9em; color: #555;">内容：基于AGV全向移动底盘结构设计了一种可适应多种路面的舵轮结构，采用伺服电机转向，减小机械摩擦。</span>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🏆 竞赛成果 (国家级/国际级10项, 省部级12项)</h2>
+            <ul>
+                <li><strong>RoboMaster 机甲大师赛 (2025)：</strong> 高校超级对抗赛全国赛三等奖、西南站三等奖（联盟赛3V3步兵组三等奖）、中部赛区二等奖（步兵组主力，舵轮步兵与全向轮步兵操作手，负责底盘矩阵计算、IMU解算、双自由度云台控制及SLAM导航部署）。</li>
+                <li><strong>RoboCup 中国机器人大赛 (2024-2025)：</strong> 农业机器人-灌溉机器人全国赛二等奖（重庆区域赛冠军）、旅游机器人-机器人寻宝全国赛三等奖（重庆区域赛冠军）、旅游机器人-机器人探险（重庆区域赛冠军）、无人机挑战赛-无人机实物组专项赛三等奖、VEX U赛项全国三等奖及专项赛一等奖、（领队及VEX团队主干，负责设备调试与FreeRTOS系统移植）。</li>
+                <li><strong>VEX 机器人世界锦标赛 (2024-2025)：</strong> VEX U亚洲锦标赛大学组一等奖、VEX U世锦赛预选赛二等奖（代表中国队晋级2025达拉斯世锦赛全球八强）。</li>
+                <li><strong>中国高校智能机器人创意大赛 (2025)：</strong> 全国二等奖、重庆区域冠军（技能赛冠军、对抗赛冠军）。</li>
+                <li><strong>全国大学生电子设计大赛 (2025)：</strong> “TI”杯重庆市一等奖（负责底盘循迹闭环控制，云台自主瞄准等）。</li>
+                <li><strong>全国大学生数学建模竞赛 (2024)：</strong> 重庆市二等奖（担任编程手，处理数据及最优算法分配）。</li>
+                <li><strong>全国大学生创新实践竞赛 (2024)：</strong> 智能救援赛项重庆赛区二等奖（yolov5目标识别，全向轮底盘控制）。</li>
+                <li><strong>全国大学生创新方法大赛 (2024)：</strong> Triz方法论重庆赛区三等奖（刷牙机器人产品调研与样机制作）。</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>🔬 科研与项目经验</h2>
+            
+            <div class="item-title">
+                <span>水射流叶片切割机器人 (工信部揭榜挂帅项目)</span>
+                <span>核心成员 | 2025</span>
+            </div>
+            <div class="item-subtitle">校企联合科研（北京华能长江环保、合肥通用机械研究院、重大机器人应用创新实验室）</div>
+            <p style="font-size: 0.9em;">熟练掌握SLAM建图以及导航技术之后，在实验室（机器人应用创新实验室-智能装备实验室研发团队（导师张雷-副教授））已有设备的基础上，不依靠单一的轮式里程计，采用GPS+IMU滤波融合的方式对移动设备进行精准定位，并结合无人机机载激光雷达对复杂起伏场地进行三维建图，并进行目标导航。同时基于机械臂逆解算，通过控制六轴机械臂实现针对上位机提供的点云数据进行叶片切割路线规划，并构建奇异点规避以及机械臂运动轨迹数据矩阵，同时完成上位机深度点云数据接口搭建。其次基于现有的风机叶片模型进行全局三维重建（基于深度相机三维SLAM建图），输出超过5000个点云数据集。目前正在接入大模型，部署VLN（视觉语言导航）。</p>
+
+            <div class="item-title">
+                <span>畅跑呼吸 (重大卓越工程师学院本科生创业项目，明月湖科创基地融资)</span>
+                <span>联合创始人/CTO | 2025</span>
+            </div>
+            <p style="font-size: 0.9em;">1.创业联合创始人：前期负责前往各大医院进行呼吸病患者用户访谈，产品级桌面调研-大同呼吸医疗器械的竞品开发链路，探索医疗领域呼吸治疗器械的技术壁垒。同时拆机某大厂制氧机。2.创业团队CTO：负责整套样机开发与迭代工作，自主研发“屏障风”“循环风”模式构建，“双凤系统”风洞试验数据采集与实验场景搭建，前三代样机控制框架搭建与结构设计搭建，“双风系统”流体仿真构建等工作。目前该项目作为主要负责人已获得重庆市投资企业10w融资基金以及国家卓越工程师学院2w立项基金，已进入重庆明月湖科创基地入孵，在六月份有机会获得50w融资。预计在获得融资前产出不少于3项产品专利与科研论文。</p>
+
+            <div class="item-title">
+                <span>基于yolo v5视觉识别的苹果分类机器人 (市级大创)</span>
+                <span>核心成员 | 2024</span>
+            </div>
+            <p style="font-size: 0.9em;">使用yolo v5算法训练已有不同成熟度的苹果数据库，基于Gmapping自主建图算法实现已有复杂场地的SLAM自主建图，在ROS2环境下实现移动底盘的自主导航，识别到苹果物体之后依据成熟度不同开始对其进行分类。全部的算法仿真和实机部署。并且已经产出论文及专利各一项。</p>
+
+            <div class="item-title">
+                <span>基于狐猴跳跃仿真的单足跳跃机器人 (SRTP)</span>
+                <span>核心成员 | 2023</span>
+            </div>
+            <p style="font-size: 0.9em;">负责足式机器人关节结构设计，ROS环境下的腿部物理仿真及关节电机动力学控制。</p>
+
+            <div class="item-title">
+                <span>第六届计算机工程与智能控制国际学术会议（广东工业大学）  </span>
+                <span>汇报人/第一作者 | 2025</span>
+            </div>
+            <p style="font-size: 0.9em;">基于EI会议见刊论文进行全英文现场口头学术汇报，并获得会议汇报完成证书。</p>
+        </section>
+
+        <section>
+            <h2>💼 实习与社会实践</h2>
+            <ul>
+                <li><strong>深圳无界智航科技有限公司 (2025)</strong> - <i>硬件产品经理 & 硬件工程师</i><br>
+                <span style="font-size: 0.9em; color: #555;">1.负责人形机器人双六轴机械臂连接处接口硬件电路板绘制，打样以及产品测试；2.X-Ego数据采集摄像机柜硬件选型，能耗与安全性能评估；3.X-Ego数据采集员头部手腕部布线方式与产品级GMSL总线通讯调研。</span></li>
+                
+                <li><strong>杭州市灵鸽慧启智能有限公司 (2025)</strong> - <i>具身智能仿真实习</i><br>
+                <span style="font-size: 0.9em; color: #555;">在该社区进行具身智能相关产业应用的线上实习活动，工作以线上任务的形式展开，目前已完成机器人高阶理论的学习（包括坐标转换，机械臂解算等），同时通过阅读具身智能前沿论文，完成相关应用场景的复刻（在ROS2环境下搭建gazebo导航模拟仿真环境）。</span></li>
+
+                <li><strong>清华大学深圳国际研究生院博士生团队 (2025)</strong> - <i>研发助理</i><br>
+                <span style="font-size: 0.9em; color: #555;">数电嵌入式信号采集算法构建：构建ADC电平信号采集矩阵，用于判断压力受力点，以及受力反馈图像构建。柔性PCB绘制与数据传输：基于压力矩阵的FP线材绘制柔性PCB控制系统板，便于携带在手上，同时缩小整体硬件电气空间。MIT-OpenTouch开源手部受力识别模型模拟仿真。</span></li>
+
+                <li><strong>重庆晨之越科技有限公司 (2024)</strong> - <i>嵌入式工程师</i><br>
+                <span style="font-size: 0.9em; color: #555;">在该公司的情传EmoTrans初创团队实习，从事嵌入式开发岗位工作，负责交互式机器人嵌入式物联网开发，根据后端接口规范完成协议适配与固件实现，参与 UI 设计与界面落地。</span></li>
+                
+                <li><strong>vivo & 联想集团有限公司 (2025)</strong> - <i>校园大使</i></li>
+            </ul>
+        </section>
+
+    </div>
+</body>
+</html>
