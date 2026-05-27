@@ -3,243 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jingquan Hong - Personal Homepage</title>
+    <title>Academic Pages of Jingquan Hong</title>
     <style>
-        :root {
-            --primary-color: #4B0082;
-            --text-color: #333;
-            --bg-color: #f4f4f9;
-            --card-bg: #ffffff;
-        }
+        /* General Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
         }
-        header {
-            background-color: #ffffff; 
-            color: var(--text-color); 
-            padding: 50px 0;
-            border-bottom: 1px solid #e9ecef; 
-        }
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.5em;
-        }
-        .contact-info a {
-            color: var(--primary-color); 
-            text-decoration: none;
-            margin: 0 5px;
-            font-size: 0.95em;
-        }
-        .contact-info a:hover {
-            color: #6A5ACD; 
+
+        a {
+            color: #3498db;
             text-decoration: underline;
         }
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        section {
-            background: var(--card-bg);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid #e9ecef;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        .item-title {
+
+        h1, h2, h3 {
             font-weight: bold;
-            font-size: 1.1em;
-            margin-top: 15px;
-            display: flex;
-            justify-content: space-between;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
-        .item-subtitle {
-            color: #555;
-            font-size: 0.95em;
-            font-style: italic;
+
+        ul {
+            margin-left: 20px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            list-style-type: disc;
+        }
+
+        li {
             margin-bottom: 8px;
         }
-        .tag {
-            display: inline-block;
-            background: #e9ecef;
-            color: #495057;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            margin: 3px 3px 3px 0;
+
+        /* Resume Container */
+        .resume-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            border-right: 1px solid #eee; /* Light right boundary for visual separation */
         }
-        ul {
-            margin-top: 8px;
-            padding-left: 20px;
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 300px;
+            flex-shrink: 0;
+            padding-right: 20px;
         }
-        .award-purple {
-            color: var(--primary-color);
+
+        .avatar-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #8E44AD; /* Purple boundary */
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            fill: #7f8c8d;
+            margin-right: 10px;
+        }
+
+        .contact-text {
+            font-size: 1em;
+        }
+        
+        .contact-text a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .contact-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex-grow: 1;
+        }
+
+        .top-bar {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .large-title {
+            font-size: 1.8em;
+            margin-bottom: 0;
+        }
+
+        .about-me {
+            margin-bottom: 30px;
+        }
+
+        .about-me-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .about-me-desc {
+            margin-bottom: 10px;
+        }
+
+        .link-bar {
+            margin-bottom: 20px;
+        }
+
+        .academic-background {
+            margin-bottom: 30px;
+        }
+
+        .academic-title {
+            font-size: 1.5em;
+        }
+
+        .institution {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .degree {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .research-interests {
+            margin-bottom: 30px;
+        }
+
+        .interests-title {
+            font-size: 1.5em;
+        }
+
+        .interests-desc {
             font-weight: bold;
         }
-        li {
-            margin-bottom: 6px;
+
+        .current-research {
+            margin-bottom: 30px;
         }
-        .highlight {
-            color: #d9534f;
+
+        .section-large-title {
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project-title {
+            font-size: 1.2em;
+            color: #2980b9;
+            margin-bottom: 5px;
             font-weight: bold;
+        }
+
+        .project-desc {
+            margin-bottom: 0;
+        }
+
+        .publications {
+            margin-bottom: 30px;
+        }
+
+        .publication-list {
+            margin-bottom: 0;
+        }
+
+        .publication-item {
+            margin-bottom: 10px;
+        }
+
+        .competitions {
+            margin-bottom: 30px;
+        }
+
+        .competition-list {
+            margin-bottom: 0;
+        }
+
+        .competition-item {
+            margin-bottom: 10px;
+        }
+
+        .honors {
+            margin-bottom: 30px;
+        }
+
+        .honor-list {
+            margin-bottom: 0;
+        }
+
+        .honor-item {
+            margin-bottom: 10px;
+        }
+
+        .work-experience {
+            margin-bottom: 30px;
+        }
+
+        .work-list {
+            margin-bottom: 0;
+        }
+
+        .work-item {
+            margin-bottom: 10px;
+        }
+
+        .date-text {
+            font-weight: bold;
+        }
+
+        .source-italic {
+            font-style: italic;
         }
     </style>
 </head>
 <body>
 
-    <header>
-    <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; gap: 30px; padding: 0 20px;">
-        <img src="photo.jpg" alt="Jingquan Hong" style="width: 140px; height: 170px; border-radius: 0; border: 1px solid var(--primary-color); object-fit: cover;">
-        
-        <div style="flex: 1; text-align: left; margin-left: 20px;">
-            <div style="display: flex; align-items: center; justify-content: space-between;">
-                <div>
-                    <h1 style="margin: 0; color: var(--primary-color); font-size: 2.2em;">Jingquan Hong</h1>
-                    <div style="font-size: 0.9em; color: #666; margin-top: 5px;">Hometown: Changsha, Hunan Province</div>
-                </div>
-                <img src="cqu_logo.png" alt="National Excellent Engineer School, Chongqing University" style="height: 55px; object-fit: contain;">
+<div class="resume-container">
+    <div class="sidebar">
+        <div class="avatar-container">
+            <img src="photo.jpg" alt="Avatar of Jingquan Hong" class="avatar">
+        </div>
+        <h1 class="name">Jingquan Hong</h1>
+        <p class="tagline">Robotics Engineer, Embedded System Enthusiast</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 20 20"><path d="M10 20c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10zm0-18c-4.411 0-8 3.589-8 8s3.589 8 8 8 8-3.589 8-8-3.589-8-8-8z"/><path d="M10 14c-2.206 0-4-1.794-4-4s1.794-4 4-4 4 1.794 4 4-1.794 4-4 4zm0-6c-1.103 0-2 .897-2 2s.897 2 2 2 2-.897 2-2-.897-2-2-2z"/></svg>
+                <span class="contact-text">Changsha, Hunan, China</span>
             </div>
-
-            <div class="contact-info" style="margin-top: 15px; border-top: 1px inset #eee; padding-top: 10px;">
-                <span>📞 +86 13874819528</span> |
-                <span>📧 <a href="mailto:20234262@stu.cqu.edu.cn">20234262@stu.cqu.edu.cn</a></span>
-                <br>
-                <span>🔗 <a href="https://github.com/jingquanhong" target="_blank">GitHub</a></span> |
-                <span>🔗 <a href="https://gitee.com/hongjingquan" target="_blank">Gitee</a></span>
+            <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 20 20"><path d="M10 1.25L10 1.25L2.5 5v10L10 18.75 17.5 15V5z"/><circle cx="10" cy="10" r="10"/></svg>
+                <span class="contact-text">National Elite Institude of Engineering, Chongqing University</span>
+            </div>
+            <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 20 20"><path d="M10 13c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0-11c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z"/><path d="M10 7c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0 6c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6-2.687-6-6-6z"/></svg>
+                <span class="contact-text"><a href="mailto:20234262@stu.cqu.edu.cn">20234262@stu.cqu.edu.cn or hongjingquan981@gmail.com</a></span>
             </div>
         </div>
     </div>
-</header>
 
-    <div class="container">
-        
-        <section>
-            <h2>🧠 Research Interests</h2>
-            <p><strong>Embedded Systems</strong>, <strong>Linux Development</strong> (Robotic Systems, Reinforcement Learning, ROS Industrial Control Systems), <strong>Intelligent Hardware Control</strong></p>
-        </section>
+    <div class="main-content">
+        <div class="top-bar">
+            <h1 class="large-title">Welcome To Academic Pages of Jingquan Hong</h1>
+        </div>
 
-        <section>
-            <h2>🎓 Education Background</h2>
-            <div class="item-title">
-                <span>Chongqing University | National Excellent Engineer School</span>
-                <span>Sept. 2023 - Present</span>
+        <div class="about-me">
+            <h2 class="about-me-title">About Me</h2>
+            <p class="about-me-desc">I am a third-year undergraduate student majoring in Robotics Engineering at Chongqing University. My research is centered on VLN and Linux-based control. Currently, I conduct research in the Robot Application Innovation Laboratory, under the supervision of <a href="https://faculty.cqu.edu.cn/LeiZhang/zh_CN/index.htm" target="_blank">Prof. Lei Zhang</a>.</p>
+            <div class="link-bar">
+                <a href="https://github.com/jingquanhong" target="_blank">GitHub</a> | 
+                <a href="https://gitee.com/hongjingquan" target="_blank">Gitee</a>  
             </div>
-            <div class="item-subtitle">B.Eng. in Robotics Engineering (Mingyue Sci-Tech Innovation Experimental Class, Joint Enterprise-University Program, Base Class)</div>
+        </div>
+
+        <div class="academic-background">
+            <h2 class="academic-title">Academic Background</h2>
+            <p class="institution">Chongqing University (2023.09 - now)</p>
+            <p class="degree">B.Eng. in Robotics Engineering</p>
             <ul>
-                <li><strong>Academic Performance:</strong> GPA: 3.68/4.0 | Major Rank: 8/58 (Top 8 for the first five semesters) | Average Score: 88.20</li>
-                <li><strong>English Proficiency:</strong> CET-6: 498 | CET-4: 509</li>
-                <li><strong>Research Orientation:</strong> Advisor: Assoc. Prof. Lei Zhang | Lab: Robot Application Innovation Laboratory | Projects: Waterjet Blade Cutting Robot / Photovoltaic Cleaning Robot</li>
-                <li><strong>Honors & Awards:</strong> Comprehensive Scholarship of Chongqing University (2023-2025), Laifu Social Scholarship (2025), Outstanding Student (2024), Study Commissary of Mingyue Class</li>
-                <li><strong>Core Courses:</strong> Principles of Automatic Control (96), Microcircuit Design (98), Software Design (90), Engineering Principles (92), Linear Algebra (94), Methods of Mathematical Physics (94), Signals and Information Systems (92), etc.</li>
+                <li>GPA: 3.68/4</li>
+                <li>Rank: 8/58 (Average Score: 88.20 for the first five semesters)</li>
+                <li>English: CET6: 498, CET4: 509</li>
+                <li>Special class title: Mingyue Sci-Tech Innovation Experimental Class</li>
+                <li>Core Courses: Principles of Automatic Control(96), Microcircuit Design(98), Software Design(94), Linear Algebra(94), etc.</li>
             </ul>
-        </section>
+        </div>
 
-        <section>
-            <h2>📄 Publications & Patents</h2>
-            
-            <div class="item-title">Academic Papers</div>
-            <ul>
-                <li>
-                    <strong>C. Jin, J. Hong, H. Sun, et al.</strong> "Design and Development of a Positioning System Based on Driven Orthogonal Omnidirectional Wheels," <i>Information Technology</i>, 2028. (<span class="highlight">Core Journal, First Student Author, Accepted</span>)<br>
-                    <span style="font-size: 0.9em; color: #555;">Abstract: Addressing the lack of odometry accuracy in LiDAR SLAM mapping, this paper designs a highly adaptable and precise wheeled odometry device and algorithm. By utilizing high-precision encoders combined with adaptive terrain structures and an integrated IMU state Kalman filter algorithm, it achieves precise positioning of highly mobile devices in various terrains, providing reliable odometry reference for SLAM and 3D mapping with depth cameras.</span>
-                </li>
-                <li style="margin-top: 10px;">
-                    <strong>J. Hong, B. Hao, H. He and C. Tang.</strong> "Heart Rate Detection System Based on ADS1292 Module," <i>2025 6th International Conference on Computer Engineering and Intelligent Control (ICCEIC)</i>, 2025. (
-                    <a href="https://ieeexplore.ieee.org/document/11309043" target="_blank" style="color: var(--primary-color); text-decoration: underline;">IEEE Xplore</a>, 
-                    <a href="https://www.engineeringvillage.com/app/doc/?docid=cpx_M405e63b819cf60bd6c7M7e8d1017816518&pageSize=25&index=1&searchId=5a53ff7d31064574911a5c318e90b255&resultsCount=1&usageZone=resultslist&usageOrigin=searchresults&searchType=Quick" target="_blank" style="color: var(--primary-color); text-decoration: underline;">EI Compendex</a>, 
-                    <span class="highlight">First Author</span>, Published)<br>
-                    <span style="font-size: 0.9em; color: #555;">Abstract: This paper utilizes the ADS1292 module to extract simulated and real ECG signals, transmits them to embedded devices, and performs frequency domain analysis after signal filtering. This yields key ECG parameters of the subject, including the heart rate index, RR interval, and heartbeat cycle.</span>
-                </li>
-            </ul>
+        <div class="research-interests">
+            <h2 class="interests-title">Research Interests</h2>
+            <p class="interests-desc">Linux-based and Hardware-based Control, Visual-Language Navigation, Mechanical Structure Design and Integrated Circuit Design</p>
+        </div>
 
-            <div class="item-title">Invention Patents</div>
-            <ul>
-                <li>
-                    <strong>"A Driving Steering Wheel"</strong> (Utility Model Patent, <span class="highlight">First Author, Accepted</span>)<br>
-                    <span style="font-size: 0.9em; color: #555;">Abstract: Designed a steering wheel structure adaptable to various road surfaces based on the AGV omnidirectional mobile chassis, utilizing servo motors for steering to effectively reduce mechanical friction.</span>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>🏆 Competition Awards (10 National/International, 12 Provincial/Ministerial)</h2>
-            <ul>
-                <li><strong>RoboMaster University Championship (2025):</strong> <span class="award-purple">National Third Prize</span> in Super Confrontation, <span class="award-purple">Southwest Regional Third Prize (Alliance 3V3 Infantry Third Prize)</span>, <span class="award-purple">Central Regional Second Prize</span> (Infantry Main Force, Operator of Steering and Omnidirectional Infantry, responsible for chassis matrix calculation, IMU resolution, 2-DOF gimbal control, and SLAM navigation deployment).</li>
-                <li><strong>RoboCup China (2024-2025):</strong> Agricultural Robot-Irrigation Robot <span class="award-purple">National Second Prize</span> (Chongqing Regional <span class="award-purple">Champion</span>), Tourist Robot-Treasure Hunt <span class="award-purple">National Third Prize</span> (Chongqing Regional Champion), Tourist Robot-Exploration <span class="award-purple">National Third Prize</span> (Chongqing Regional <span class="award-purple">Champion</span>), Drone Challenge-Physical Group Special Prize Third Prize, VEX U National Third Prize & Special Prize First Prize (Team Leader and VEX core member, responsible for equipment debugging and FreeRTOS system porting).</li>
-                <li><strong>VEX Robotics World Championship (2024-2025):</strong> VEX U <span class="award-purple">Asia Championship University Group First Prize</span>, VEX U <span class="award-purple">World Championship Qualifier Second Prize</span> (Represented Team China to advance to the global top 8 at the 2025 Dallas World Championship).</li>
-                <li><strong>China Collegiate Intelligent Robotics Creative Competition (2025):</strong> <span class="award-purple">National Second Prize</span>, Chongqing Regional <span class="award-purple">Champion (Skills Competition Champion, Confrontation Competition Champion)</span>.</li>
-                <li><strong>National Undergraduate Electronics Design Contest (NUEDC) (2025):</strong> "TI Cup" Chongqing First Prize (Responsible for chassis tracking closed-loop control and autonomous gimbal aiming).</li>
-                <li><strong>Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM) (2024):</strong> Chongqing Second Prize (Served as programmer, handling data and optimal algorithm allocation).</li>
-                <li><strong>National Undergraduate Innovation Practice Competition (2024):</strong> Intelligent Rescue Event Chongqing Regional Second Prize (YOLOv5 target recognition, omnidirectional chassis control).</li>
-                <li><strong>National Undergraduate Innovation Method Competition (2024):</strong> TRIZ Methodology Chongqing Regional Third Prize (Toothbrushing robot product research and prototype production).</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>🔬 Research & Project Experience</h2>
-            
-            <div class="item-title">
-                <span>Waterjet Blade Cutting Robot (MIIT "Reveal the List and Take Charge" Project)</span>
-                <span>Core Member | 2025</span>
+        <div class="current-research">
+            <h1 class="section-large-title">I am working on scientific research now!</h1>
+            <div class="project">
+                <h3 class="project-title">[2025 - now] Waterjet Blade Cutting Robot (MIIT project)</h3>
+                <p class="project-desc">This project, a joint enterprise-university research initiative, utilizes Gmapping for SLAM mapping and GPS+IMU filtering for fusion-based positioning. It also performs 3D terrain mapping via drone LiDAR. Based on robotic arm inverse kinematics control, the project plans blade cutting paths using point cloud data from the host computer, ensuring singularity avoidance. A global 3D reconstruction of a wind turbine model is generated using depth camera SLAM mapping, outputting a dataset of over 5000 point clouds. Large-scale models and VLN deployment are being integrated.</p>
             </div>
-            <div class="item-subtitle">Joint Enterprise-University Research (Beijing Huaneng Yangtze River Environmental Protection, Hefei General Machinery Research Institute, CQU Robot Application Innovation Lab)</div>
-            <p style="font-size: 0.9em;">Having mastered SLAM mapping and navigation technologies, I utilized the existing equipment of our lab (Robot Application Innovation Lab - Intelligent Equipment Lab R&D Team, Advisor: Assoc. Prof. Lei Zhang). To overcome the limitations of single-wheel odometry, we adopted a GPS+IMU filtering fusion method for precise positioning of mobile devices. By combining drone-borne LiDAR, we achieved 3D mapping and target navigation in complex, undulating terrains. Based on robotic arm inverse kinematics, I controlled a 6-axis robotic arm to plan the blade cutting route using point cloud data provided by the host computer, constructed a motion trajectory data matrix to avoid singularities, and completed the depth point cloud data interface on the host machine. Furthermore, based on the existing wind turbine blade models, we performed global 3D reconstruction (via depth camera 3D SLAM mapping), outputting a dataset of over 5,000 point clouds. The project is currently integrating large models and deploying Vision-and-Language Navigation (VLN).</p>
-
-            <div class="item-title">
-                <span>Changpao Respiration (CQU National Excellent Engineer School Undergrad Entrepreneurship Project)</span>
-                <span>Co-founder / CTO | 2025</span>
+            <div class="project">
+                <h3 class="project-title">[2025 - now] Changpao Respiration (Entrepreneurship Project)</h3>
+                <p class="project-desc">This student entrepreneurship project is funded by the base. We conducting hospital user interviews and competitive analysis of existing medical-grade respiratory devices, including tearing apart several units. The prototype development involves a unique "Dual Wind System," consisting of a "Barrier Wind" and "Circulating Wind" with dedicated mode construction. Wind tunnel test data is collected for control framework and structural design across multiple generations of prototypes, along with dual wind system fluid simulation. 10w fund secured, 2w school fund; additional 50w fund expected. Anticipating 3+ patents and papers.</p>
             </div>
-            <p style="font-size: 0.9em;">1. Co-founder Role: In the early stages, I conducted user interviews with respiratory patients at major hospitals and performed product-level desktop research, including competitive analysis of Datong Respiratory Medical Devices, exploring technical barriers in the medical respiratory therapy field, and disassembling oxygen generators from leading manufacturers. 2. CTO Role: Responsible for the development and iteration of the complete prototype, including the independent R&D of the "Barrier Wind" and "Circulating Wind" modes. I constructed the "Dual Wind System" wind tunnel test data collection and experimental scenarios, established the control framework and structural design for the first three generations of prototypes, and conducted fluid simulation for the dual wind system. The project has received a 100,000 RMB angel investment fund in Chongqing and a 20,000 RMB project initiation fund from the National Excellent Engineer School. It is currently being incubated at the Mingyue Lake Innovation Base and anticipates securing a 500,000 RMB financing round in June. Before the next round of financing, we expect to output no fewer than 3 product patents and academic papers.</p>
+        </div>
 
-            <div class="item-title">
-                <span>Apple Sorting Robot Based on YOLO v5 Visual Recognition (Municipal Innovation Project)</span>
-                <span>Core Member | 2024</span>
+        <div class="publications">
+            <h1 class="section-large-title">Publications and Patents</h1>
+            <div class="publication-list">
+                <p class="publication-item"><span class="date-text">[2028]</span> J. Hong, et al., "Design and Development of a Positioning System Based on Driven Orthogonal Omnidirectional Wheels," <span class="source-italic">Information Technology</span>. (Translated and brief description of contents).</p>
+                <p class="publication-item"><span class="date-text">[2025.11]</span> J. Hong, et al., "Heart Rate Detection System Based on ADS1292 Module," 6th ICCEIC. <a href="https://ieeexplore.ieee.org/document/11309043" target="_blank">IEEE</a> and <a href="https://engineeringvillage.com/app/doc/?docid=cpx_M405e63b819cf60bd6c7M7e8d1017816518&pageSize=25&index=1&searchId=5a53ff7d31064574911a5c318e90b255&resultsCount=1&usageZone=resultslist&usageOrigin=searchresults&searchType=Quick" target="_blank">EI Compendex</a>.</p>
+                <p class="publication-item"><span class="date-text">[2023.09]</span> "A Driving Steering Wheel" (Invention Patent Authorized).</p>
             </div>
-            <p style="font-size: 0.9em;">Utilized the YOLO v5 algorithm to train an existing database of apples with different maturity levels. Based on the Gmapping autonomous mapping algorithm, we achieved autonomous SLAM mapping in complex environments. Implemented autonomous navigation of a mobile chassis in the ROS2 environment, which classifies the identified apples according to their maturity. Handled all algorithm simulations and real-machine deployments, resulting in one published paper and one patent.</p>
+        </div>
 
-            <div class="item-title">
-                <span>Single-legged Leaping Robot Based on Lemur Leaping Simulation (SRTP)</span>
-                <span>Core Member | 2023</span>
+        <div class="competitions">
+            <h1 class="section-large-title">Competitions and Entrepreneurship</h1>
+            <div class="competition-list">
+                <p class="competition-item"><span class="date-text">[2025]</span> <strong>RoboMaster University Championship:</strong> National 3rd Prize (Super Confrontation), Central Regional 2nd Prize, Southwest Regional 3rd Prize, Infantry Group 3rd Prize.</p>
+                <p class="competition-item"><span class="date-text">[2024-2025]</span> <strong>RoboCup China:</strong> National 2nd Prize & Chongqing Champion (Agricultural Robot), Two National 3rd Prizes & Chongqing Champion (Tourist Robot), National 3rd Prize & Special 1st Prize (VEX U), 3rd Prize (Drone Physical Special Competition).</p>
+                <p class="competition-item"><span class="date-text">[2024-2025]</span> <strong>VEX Robotics World Championship:</strong> Global Top 8 (2025 World Championship), World Qualifier 2nd Prize (2024), Asia Championship University Group 1st Prize (2024).</p>
+                <p class="competition-item"><span class="date-text">[2025]</span> <strong>China Collegiate Intelligent Robotics Creative Competition:</strong> National 2nd Prize, Chongqing Regional Champion.</p>
+                <p class="competition-item"><span class="date-text">[2025]</span> <strong>National Undergraduate Electronics Design Contest (NUEDC):</strong> "TI Cup" Chongqing 1st Prize.</p>
+                <p class="competition-item"><span class="date-text">[2024]</span> <strong>Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM):</strong> Chongqing 2nd Prize.</p>
+                <p class="competition-item"><span class="date-text">[2024]</span> <strong>National Undergraduate Innovation Practice Competition:</strong> Chongqing Regional 2nd Prize (Intelligent Rescue Event).</p>
+                <p class="competition-item"><span class="date-text">[2024]</span> <strong>National Undergraduate Innovation Method Competition:</strong> Chongqing Regional 3rd Prize (TRIZ Methodology).</p>
             </div>
-            <p style="font-size: 0.9em;">Responsible for the design of the legged robot's joint structure, leg physical simulation in the ROS environment, and joint motor dynamics control.</p>
+        </div>
 
-            <div class="item-title">
-                <span>6th International Conference on Computer Engineering and Intelligent Control (ICCEIC)</span>
-                <span>Speaker / First Author | 2025</span>
+        <div class="honors">
+            <h1 class="section-large-title">Honors and Awards</h1>
+            <div class="honor-list">
+                <p class="honor-item"><span class="date-text">[2023-2025]</span> Chongqing University Comprehensive Scholarship</p>
+                <p class="honor-item"><span class="date-text">[2025]</span> Laifu Social Scholarship</p>
+                <p class="honor-item"><span class="date-text">[2024]</span> Outstanding Student Title</p>
             </div>
-            <p style="font-size: 0.9em;">Delivered an on-site, all-English academic oral presentation based on my accepted EI conference paper and obtained the conference presentation certificate.</p>
-        </section>
+        </div>
 
-        <section>
-            <h2>💼 Internship & Social Practice</h2>
-            <ul>
-                <li><strong>Shenzhen Wujie Zhihang Technology Co., Ltd. (2025)</strong> - <i>Hardware Product Manager & Hardware Engineer</i><br>
-                <span style="font-size: 0.9em; color: #555;">1. Responsible for drawing, proofing, and product testing of the hardware circuit board at the interface of the humanoid robot's dual 6-axis robotic arms; 2. Hardware selection, energy consumption, and safety performance evaluation of the X-Ego data collection camera cabinet; 3. Researched the wiring methods for the head and wrists of X-Ego data collectors and product-level GMSL bus communication.</span></li>
-                
-                <li><strong>Hangzhou Lingge Huqi Intelligent Co., Ltd. (Xbotics Embodied Intelligence Lab) (2025)</strong> - <i>Embodied AI Simulation Intern</i><br>
-                <span style="font-size: 0.9em; color: #555;">Participated in an online internship focusing on embodied intelligence industry applications. Completed advanced robotics theory learning (including coordinate transformation and robotic arm resolution). By studying frontier papers on embodied AI, I replicated related application scenarios (building a Gazebo navigation simulation environment within ROS2).</span></li>
-
-                <li><strong>Tsinghua Shenzhen International Graduate School (SIGS) Doctoral Team (2025)</strong> - <i>R&D Assistant</i><br>
-                <span style="font-size: 0.9em; color: #555;">Digital embedded signal acquisition algorithm construction: Built an ADC level signal acquisition matrix to determine pressure points and reconstruct stress feedback images. Flexible PCB drawing and data transmission: Designed flexible PCB control system boards using FP wire drawing based on the pressure matrix for wearable hand devices, minimizing overall hardware space. Simulated the MIT-OpenTouch open-source hand stress recognition model.</span></li>
-
-                <li><strong>Chongqing Chenzhiyue Technology Co., Ltd. (2024)</strong> - <i>Embedded Software Engineer</i><br>
-                <span style="font-size: 0.9em; color: #555;">Interned at the company's EmoTrans startup team as an embedded developer. Responsible for the embedded IoT development of interactive robots, adapting protocols and implementing firmware according to back-end interface specifications, and participating in UI design and interface implementation.</span></li>
-                
-                <li><strong>vivo & Lenovo Group Ltd. (2025)</strong> - <i>Campus Ambassador</i></li>
-            </ul>
-        </section>
-
+        <div class="work-experience">
+            <h1 class="section-large-title">Work Experience and Internships</h1>
+            <div class="work-list">
+                <p class="work-item"><span class="date-text">[2025]</span> Shenzhen Wujie Zhihang Technology (Hardware Product Manager & Hardware Engineer)</p>
+                <p class="work-item"><span class="date-text">[2025]</span> Hangzhou Lingge Huqi Intelligent (Embodied Intelligence Simulation Intern)</p>
+                <p class="work-item"><span class="date-text">[2025]</span> Tsinghua Shenzhen International Graduate School (R&D Assistant)</p>
+                <p class="work-item"><span class="date-text">[2024]</span> Chongqing Chenzhiyue Technology (Embedded Engineer)</p>
+            </div>
+        </div>
     </div>
+</div>
+
 </body>
 </html>
